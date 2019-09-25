@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Pagina web para sumar :D</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+     body {
+      background: green;
+       font-family: sans-serif;
+     }
+     button{
+      color: white;
+      background: black;
+     }
+   </style>
+ </head>
+ <body>
+  <center>
+   <h1>Pagina web para sumar :D</h1>
+   <form name="vista">
+     <p>
+      <h2>Ingrese un numero</h2>
+       <input type="number" name="numero1" required placeholder="Numero 1"
+         accesskey="1">
+     </p>
+     <p>
+      <h2>Ingrese un numero</h2>
+       <input type="number" name="numero2" required placeholder="Numero 2"
+         accesskey="2">
+     </p>
+     <p>
+       <output name="respuesta"></output>
+     </p>
+     <p>
+       <button type="submit">Sumar</button>
+     </p>
+    </form>
+   <script>
+     "use strict";
+     document.vista.addEventListener("submit", saluda);
+     function saluda(evt) {
+       evt.preventDefault();
+       const numero1 = document.vista.numero1.value;
+       const numero2 = document.vista.numero2.value;
+       var suma = parseInt(numero1) + parseInt(numero2);
+       document.vista.respuesta.value = "La suma de los numeros es: "+suma;
+     }
+   </script>
+ </center>
+ </body>
+</html>
